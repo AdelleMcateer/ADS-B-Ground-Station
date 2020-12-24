@@ -9,31 +9,31 @@
 
 import firebase_admin
 from firebase_admin import credentials, firestore, storage, db
-import time
-from datetime import datetime
+import datetime
 import os
 
-# import requests (or urllib2) to connect to the URL.
+# import requests to connect to the URL.
 import requests
 
-# import json to parse the JSON output and extract the data you need.
+# import json to parse output and extract the data.
 import json
 
+# This is the url address of the PiAware json dumps
 url = 'http://192.168.1.123/dump1090-fa/data/aircraft.json'
 
-# Using print(response) returns <Response [200]> which means you are successfully connected.
+# Timestamp for the data loaded to Firebase
+currentTime = datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S")
+
+# Using print(response) returns <Response [200]> to show successful connecttion to the url.
 response = requests.get(url)
 print(response)
 
-# Read the output
 data = response.text
-
-# Parse JSON – convert the string to JSON
 parsed = json.loads(data)
 
-# Use of indentation to make the data more readable
 print(json.dumps(parsed, indent=4))
 
+# Firebase credentials
 cred=credentials.Certificate('./serviceAccountKey.json')
 firebase_admin.initialize_app(cred, {
     'storageBucket': 'ads-b-ground-station.appspot.com',
@@ -46,6 +46,7 @@ ref = db.reference('/')
 home_ref = ref.child('file')
 
 def store_file(fileLoc):
+
     filename=os.path.basename(fileLoc)
     # Store File in FB Bucket
     blob = bucket.blob(filename)
@@ -53,23 +54,21 @@ def store_file(fileLoc):
     blob.upload_from_filename(outfile)
 
 def push_db(fileLoc, time):
-    filename=os.path.basename(fileLoc)
 
-    # Push file reference to image in Realtime DB
+    filename=os.path.basename(fileLoc)
+ 
+    # Push the aircraft data in Realtime DB
     home_ref.push({
-        'image': filename,
+        'aircraft data': filename,
         'timestamp': time}
     )
 
+# JSON file created for the data and data appended each time the script is run 
 if __name__ == "__main__":
-    f = open("./test.txt", "w")
-    f.write("test")
+    f = open("./data.json", "a+")
+    f.write(json.dumps(parsed, indent=4))
     f.close()
-    store_file('./test.txt')
-    push_db('./test.txtO', '12/23/2020 9:00')
-
-
-
-
+    store_file('./data.json')
+    push_db(data, currentTime)
 
 
