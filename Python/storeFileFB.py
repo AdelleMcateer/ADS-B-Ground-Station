@@ -2,14 +2,15 @@
 
 # Author: Adelle McAteer
 # Version: 1
-# Date: 12-24-2020
+# Date: 12-26-2020
 
-# This script attempts to load the json data to Firebase
+# This script loads the json data to Firebase
 # The code is a reworking of one of the weekly labs with help from an online tutorial
 
 import firebase_admin
 from firebase_admin import credentials, firestore, storage, db
 import datetime
+import time
 import os
 
 # import requests to connect to the URL.
@@ -19,7 +20,7 @@ import requests
 import json
 
 # This is the url address of the PiAware json dumps
-url = 'http://192.168.1.123/dump1090-fa/data/aircraft.json'
+url = 'http://192.168.0.113/dump1090-fa/data/aircraft.json'
 
 # Timestamp for the data loaded to Firebase
 currentTime = datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S")
@@ -56,10 +57,10 @@ def store_file(fileLoc):
 def push_db(fileLoc, time):
 
     filename=os.path.basename(fileLoc)
- 
+
     # Push the aircraft data in Realtime DB
     home_ref.push({
-        'aircraft data': filename,
+        'data': filename,
         'timestamp': time}
     )
 
@@ -70,5 +71,4 @@ if __name__ == "__main__":
     f.close()
     store_file('./data.json')
     push_db(data, currentTime)
-
-
+    time.sleep(60*10)
