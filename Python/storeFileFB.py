@@ -2,7 +2,7 @@
 
 # Author: Adelle McAteer
 # Version: 1
-# Date: 12-26-2020
+# Date: 12-30-2020
 
 # This script loads the json data to Firebase
 # The code is a reworking of one of the weekly labs with help from an online tutorial
