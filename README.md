@@ -26,12 +26,11 @@ stored. I would like to tap into it more, possibly use the sense hat to light up
 detected and use ThingSpeak and Twitter to publish information of flight activity
 
 Technologies and Tools
-- RaspberryPi4 with PiAware installed
+- RaspberryPi4 with SenseHat & PiAware installed 
 - Raspberry Pi 3 Model B for data storage
 - FlightAware Pro Stick Plus - FlightAware's USB SDR ADS-B Receiver with a built-in
 - 1090MHz bandpass filter
 - 1090MHz Desk Antenna - a 3dBi ADS-B 1090Mhz SMA Antenna with magnetic base
-- FLIRC Case - aluminium case with a central cooling-core
 - WiFi – to connect the RaspberyPi and data transmission
 - Mobile phone for email & Twitter notification
 - Python
@@ -39,6 +38,5 @@ Technologies and Tools
 - IFTTT
 - Twitter
 - Firebase
-- Glitch
 
 Project Repository: https://github.com/AdelleMcateer/ADS-B-Ground-Station
