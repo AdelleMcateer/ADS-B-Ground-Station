@@ -5,8 +5,9 @@
 
 # This is a script that I found on this site:
 # https://www.stuffaboutcode.com/2015/10/piaware-aircraft-overhead-led.html
-# It is a work in progress and I have amended it somewhat to get it to print the current
-# json info to the Pi shell
+# It is a work in progress and I have amended it somewhat
+# When ran it loops through the data and prints the current
+# json info to the shell
 
 from urllib.request import urlopen
 import json
@@ -39,7 +40,7 @@ class FlightData():
 
         self.aircraft = AirCraftData.parse_flightdata_json(self.json_data)
 
-# Define the aircraft date
+# Define the aircraft data class
 class AirCraftData():
     def __init__(self,
                  hex,
@@ -55,7 +56,7 @@ class AirCraftData():
         for aircraft in json_data:
             aircraftdata = AirCraftData(
                 aircraft[0],
-                aircraft[0])
+                aircraft[1])
             aircraft_list.append(aircraftdata)
         return aircraft_list
 

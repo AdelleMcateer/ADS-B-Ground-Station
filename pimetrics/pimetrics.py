@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
 
-# Scipt to read the RaspberryPi information 
+# Scipt to read the RaspberryPi sensor and system information
+# Cloud MQTT Broker Publish and Subscribe 
 
-#!/usr/bin/env python3
+# Author: Adelle McAteer
+# Version: 1
+# Date: 12-30-2020
+
 import paho.mqtt.client as mqtt
 import paho.mqtt.publish as publish
 from urllib.parse import urlparse
@@ -43,39 +47,35 @@ if (url.username):
 mqttc.connect(url.hostname, url.port)
 mqttc.loop_start()
 
-# CPU Temperature
+# Method to obtain CPU Temperature
 def get_temp():
     temp = check_output(["vcgencmd","measure_temp"]).decode("UTF-8")
     return(findall("\d+\.\d+",temp)[0])
     print(get_temp())
 
-# Disk Usage
+# Method to obtain Disk Usage
 def get_disk_usage():
     return str(psutil.disk_usage('/').percent)
     print(get_disk_usage())
 
-# Memory Usage
+# Method to obtain Memory Usage
 def get_memory_usage():
     return str(psutil.virtual_memory().percent)
     print(get_memory_usage())
 
-# CPU Usage
+# Method to obtain CPU Usage
 def get_cpu_usage():
     return str(psutil.cpu_percent(interval=None))
     print(get_cpu_usage())
 
+# Publish messages to MQTT
 def publish_message(topic, message):
     print("Publishing to MQTT topic: " + topic)
     print("Message: " + message)
 
+# Loop to publish the metric information to a subscriber 
 while True:
     metrics=json.dumps({"CPU temperature": get_temp(),"Disk Usage %": get_disk_usage(), "Memory Usage %": get_memory_usage(),"CPU usage %": get_cpu_usage(), "timestamp":time.time()})
     mqttc.publish(base_topic+"/Pi Metrics", metrics)
     time.sleep(15)
-
-   # mqttc.publish(base_topic+"/CpuTemp", get_temp())
-   # mqttc.publish(base_topic+"/DiskUsagePercent", get_disk_usage())
-   # mqttc.publish(base_topic+"/MemoryUsagePercent", get_memory_usage())
-   # mqttc.publish(base_topic+"/CpuUsagePercent", get_cpu_usage())
-   # time.sleep(15)
 

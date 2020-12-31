@@ -4,7 +4,7 @@
 # Version: 1
 # Date: 12-26-2020
 
-# This script imports the json data and prints it
+# This script imports the json data and prints it to the shell
 
 from urllib.request import urlopen
 

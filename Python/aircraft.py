@@ -39,9 +39,9 @@ while True:
     fileLoc = f'/home/pi/assignment/data.json' # set location of data file and current time
     currentTime = datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S")
     print(f'data taken at {currentTime}') # print the time data taken at
-    f = open("..//data.json", "a+")
-    f.write(currentTime)
-    f.write(data)
+    f = open("..//data.json", "a+") #open a local file and append the information
+    f.write(currentTime) #time and date added before data
+    f.write(data)  # Write the data to the file
     f.close()
-    time.sleep(60*15)
+    time.sleep(60*15) # Repeat every 15 minutes, will add to crontab once complete
 

@@ -9,7 +9,7 @@
 import urllib.request
 import json
 
-# Metod to get a response from the URL
+# Method to get a response from the URL
 def getResponse(url):
     operUrl = urllib.request.urlopen(url)
     if(operUrl.getcode()==200):
@@ -26,11 +26,15 @@ def main():
 
     urlData = "http://192.168.0.113/dump1090-fa/data/aircraft.json"
     jsonData = getResponse(urlData)
-    # print the state id and state name corresponding
+
+    # print the Hex, Flight and Squawk keys and corresponding values
     for i in jsonData["aircraft"]:
         print(f'Hex:  {i["hex"]} , Flight: {i["flight"]} , Squawk : {i["squawk"]}')
-    else:
-        print("No details")
+    #else:
+       # print("No details")
 
 if __name__ == '__main__':
     main()
+else:
+    print("No details")
+
