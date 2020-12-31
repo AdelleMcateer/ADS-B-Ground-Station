@@ -23,11 +23,10 @@ I have already sourced the PiAware kit. So far, it has detected commercial, carg
 planes in the last 12 hours since setting it up. The information is available live when planes fly
 overhead. There are a variety of statistics available also, but the live flight information is not
 stored. I would like to tap into it more, possibly use the sense hat to light up when planes are
-detected and use ThingSpeak and Twitter to publish information of flight activity
+detected and use ThingSpeak and Twitter to publish information of flight activity.
 
 Technologies and Tools
 - RaspberryPi4 with SenseHat & PiAware installed 
-- Raspberry Pi 3 Model B for data storage
 - FlightAware Pro Stick Plus - FlightAware's USB SDR ADS-B Receiver with a built-in
 - 1090MHz bandpass filter
 - 1090MHz Desk Antenna - a 3dBi ADS-B 1090Mhz SMA Antenna with magnetic base
