@@ -5,7 +5,9 @@ Project Name: ADS-B-Ground-Station
 Student Name: Adelle McAteer
 Student ID: 20091411
 
-YouTube link: https://www.youtube.com/watch?v=DKgN_2fNHMk
+YouTube link demo link: https://www.youtube.com/watch?v=DKgN_2fNHMk
+
+YouTube link for Sensehat message display: https://www.youtube.com/watch?v=jFLCmrWethY
 
 Project Proposal
 When I first heard about the RaspberryPi project at the onsite day I started to think about what I
