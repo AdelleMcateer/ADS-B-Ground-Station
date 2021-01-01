@@ -1,0 +1,81 @@
+# Adelle McAteer
+# Date: 01.01.2021
+# References for all the resources and online material used
+
+[Accessed Nov 30th]
+http://www.virtualradarserver.co.uk/Download.aspx
+https://www.stechies.com/typeerror-string-indices-must-integers/#:~:text=TypeError%3A%20String%20Indices%20Must%20be%20Integers.%20All%20the,to%20remember%20that%20all%20the%20indexes%20are%20integers.
+
+[Accessed Dec 1st]
+https://ufyukyu.blogspot.com/2019/03/httpresponse-object-has-no-attribute.html
+https://stackoverflow.com/questions/42314025/nameerror-name-urllib-is-not-defined
+https://scriptcrunch.com/parse-json-file-using-python/
+https://medium.com/analytics-vidhya/parsing-json-files-using-python-f8fb04172ce7
+
+[Accessed Dec 2nd]
+https://careerkarma.com/blog/python-typeerror-list-indices-must-be-integers-or-slices-not-str/#:~:text=The%20error%20%E2%80%9Ctypeerror%3A%20list%20indices%20must%20be%20integers,a%20list%20and%20compare%20objects%20in%20the%20list.
+https://careerkarma.com/blog/python-typeerror-float-object-is-not-subscriptable/#:~:text=%20The%20%E2%80%9Ctypeerror%3A%20%E2%80%98float%E2%80%99%20object%20is%20not%20subscriptable%E2%80%9D,replace%20multiple%20items%20in%20a%20list%20More%20
+https://www.stechies.com/typeerror-list-indices-must-integers-slices-not-tuple/#:~:text=You%20are%20likely%20to%20encounter%20an%20error%20called,into%20this%20problem%20in%20this%20article.%20Example%201
+https://www.toolsqa.com/postman/get-request-in-postman/
+
+[Accessed Dec 3rd]
+https://infoheap.com/python-in-array-check/
+https://www.educba.com/python-if-then-else/
+https://www.geeksforgeeks.org/python-if-else/#:~:text=A%20nested%20if%20is%20an%20if%20statement%20that,place%20an%20if%20statement%20inside%20another%20if%20statement.
+https://stackoverflow.com/questions/5086178/how-to-check-if-array-is-not-empty
+
+[Accessed Dec 12th]
+https://projects.raspberrypi.org/en/projects/getting-started-with-git/6
+https://www.instructables.com/GitPi-A-Private-Git-Server-on-Raspberry-Pi/
+https://careerkarma.com/blog/git-changes-not-staged-for-commit/#:~:text=%20Git%20changes%20not%20staged%20for%20commit%20Explanation,shows%20when%20you%20run%20the%20%E2%80%9Cgit...%20More%20
+https://www.freecodecamp.org/news/how-to-delete-a-git-branch-both-locally-and-remotely/
+https://stackoverflow.com/questions/15612003/how-to-push-a-new-folder-containing-other-folders-and-files-to-an-existing-git
+
+[Accessed Dec 22nd]
+https://www.linuxnix.com/python-boto-how-to-install-and-configure-in-linuxunix/
+
+[Accessed Dec 24th]
+https://careerkarma.com/blog/python-typeerror-not-supported-between-instances-of-str-and-int/#:~:text=The%20%E2%80%9Ctypeerror%3A%20%E2%80%98%3E%E2%80%99%20not%20supported%20between%20instances%20of,you%20attempt%20to%20compare%20them%20to%20an%20integer.
+https://python.gotrained.com/python-json-api-tutorial/
+https://tutorials-raspberrypi.com/log-raspberry-pi-sensor-data-with-thingspeak-and-analyze-it/
+https://www.golinuxcloud.com/python-write-to-file/
+
+[Accessed Dec 25th]
+https://www.freemaptools.com/how-far-is-it-between.htm
+https://www.bing.com/search?q=Request+failed+with+status+code%27%2C+429%2C&cvid=4eea0274d1b246a4a1ff8a62bc26703d&pglt=43&FORM=ANNTA1&PC=U531
+https://www.geeksforgeeks.org/sleep-in-python/
+https://stackabuse.com/saving-text-json-and-csv-to-a-file-in-python/
+
+[Accessed Dec 26th]
+https://opensource.com/life/15/10/exploring-raspberry-pi-sense-hat
+
+[Accessed Dec 27th]
+https://www.datasciencelearner.com/how-to-get-json-data-from-url-in-python/
+
+[Accessed Dec 28th]
+http://www.compciv.org/recipes/cli/jq-for-parsing-json/
+https://simpleflying.com/squawk-codes/
+https://appdividend.com/2020/01/21/python-list-contains-how-to-check-if-item-exists-in-list/
+https://jsoneditoronline.org/#left=local.jepemo&right=local.ronafe
+https://flightaware.com/adsb/mlat/
+https://theaviationist.com/2020/09/29/yes-u-s-rc-135s-have-used-bogus-hex-codes-to-transmit-a-false-identity-but-its-not-to-fool-china-or-other-enemies/#:~:text=The%20hex%20code%20is%20a%20unique%20ICAO%2024-bit,changed%2C%20but%20the%20onboard%20transponders%20can%20be%20re-programmed.
+https://www.pragmaticlinux.com/2020/06/check-the-raspberry-pi-cpu-temperature/
+https://www.geeksforgeeks.org/working-with-json-data-in-python/
+
+[Accessed Dec 29th]
+https://flightaware.com/photos/view/4108897-3da1be2b3aff288f17d67bcc78649b467b42badf/aircrafttype/C68A
+
+[Accessed Dec 30th]
+https://stackoverflow.com/questions/8727935/execute-python-script-via-crontab
+https://www.adminschoice.com/crontab-quick-reference
+https://tecadmin.net/crontab-in-linux-with-20-examples-of-cron-schedule/#:~:text=%2020%20Useful%20Crontab%20Examples%20%201%201.,require%20any%20script%20to%20execute%20on...%20More%20
+
+[Accessed Dec 31st]
+http://www.aerotransport.org/php/go.php?action=definition_hex
+https://stackoverflow.com/questions/50316358/error-no-module-named-psutil
+https://flightaware.com/adsb/flightfeeder/install
+https://thingsmatic.com/2017/02/01/self-monitoring-a-raspberry-pi-with-mqtt/
+
+[Accessed Jan 1st  2021]
+https://www.faa.gov/nextgen/programs/adsb/
+
