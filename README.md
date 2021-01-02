@@ -62,13 +62,16 @@ The sensor data, humidity, temperature and pressure, is also published via MQTT 
 # MQTT Client: Publish/Subcribe to RaspberryPi system information
 Using HiveMQ
 
-# Python Script:
+Python Script:
+Python/writeEnvData.py
+
+Python Scripts:
 Python/writeEnvData.py
 
 # Database Storage: 
-# Python Scripts
+Python Scripts:
 Python /aircraft.py
 firebase/ storeFileFB.py
 
-# Sample storage file:
+Sample storage file:
 data.json
