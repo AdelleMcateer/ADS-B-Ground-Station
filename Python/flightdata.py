@@ -6,17 +6,13 @@
 # This is a script that I found on this site:
 # https://www.stuffaboutcode.com/2015/10/piaware-aircraft-overhead-led.html
 # It is a work in progress and I have amended it somewhat
-# When ran it loops through the data and prints the current
-# json info to the shell
+# It loops through the data and prints the current json info to the shell
 
 from urllib.request import urlopen
 import json
 from time import sleep
 
-#json = json.loads(urlopen('http://192.168.0.113/dump1090-fa/data/aircraft.json').read())
-
 DUMP1090DATAURL = "http://192.168.0.113/dump1090-fa/data/aircraft.json"
-#print (json)
 
 class FlightData():
     def __init__(self, data_url = DUMP1090DATAURL):
@@ -60,7 +56,7 @@ class AirCraftData():
             aircraft_list.append(aircraftdata)
         return aircraft_list
 
-#test
+# test
 if __name__ == "__main__":
     #create FlightData object
     myflights = FlightData()
