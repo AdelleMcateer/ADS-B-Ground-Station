@@ -4,30 +4,36 @@
 # Version: 1
 # Date: 12-30-2020
 
+# This script pulls the JSON data and sends it to a ThingSpeak channel
+# It also sends the sensor and system data to ThingSpeak and displays a message
+# on the SenseHat relative to what information is available.
+
 from urllib.request import urlopen
 import json
 import time
 from sense_hat import SenseHat
 import requests
-
 from subprocess import check_output
 from re import findall
+
+# Import for the system information
 import psutil
 
-#ThingSpeak API PiAware channel key
+# ThingSpeak API PiAware channel key
 WRITE_API_KEY='8I224HGCPZE8CG6Y'
 
-#ThingSpeak ThingTweetURL & channel API key
+# ThingSpeak ThingTweetURL & channel API key
 baseURL='https://api.thingspeak.com/update?api_key=%s' % WRITE_API_KEY
 
 sense = SenseHat()
 
-#clear sensehat and intialise light_state
+# clear sensehat and intialise light_state
 sense.clear()
 
-#api -endpoint
+# api -endpoint
 URL = 'http://192.168.0.113/dump1090-fa/data/aircraft.json'
 
+# Determine the colour for the SenseHat messages
 green =(0, 255, 0)
 red = (255, 0, 0)
 
@@ -56,8 +62,8 @@ def writeData(status,temp,press,hum,cputemp,disk,mem,usage):
     conn.close()
 
 # If statement to search the json array
-# The sense hat displays Data Detection or No data depending on the information
-# stored in the URL array
+# The sense hat displays Data Detection - Green or No data - Red,  
+# depending on the information stored in the URL array
 
 while True:
     r = requests.get(url = URL)
@@ -75,19 +81,14 @@ while True:
     usage=get_cpu_usage()
 
     if flightData:
-        #status = 1
-       # temp=round(sense.get_temperature(),2)
         sense.show_message("Data Detection!", text_colour = green)
         status = 1
         writeData(status,temp,press,hum,cputemp,disk,mem,usage)
-        #sense.show_message("Data Detection!", text_colour = green)
 
     else:
-      # if not aircraft :
         sense.show_message("No Data", text_colour = red)
         status=0
         writeData(status,temp,press,hum,cputemp,disk,mem,usage)
-       # sense.show_message("No Data", text_colour = red)
 
     #Testing every 15 minutes
     time.sleep(60*15)
