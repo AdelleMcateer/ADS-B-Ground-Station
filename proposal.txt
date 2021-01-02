@@ -3,10 +3,6 @@ A repository created for my Computer Systems & Networking assignment
 
 Project Name: ADS-B-Ground-Station Student Name: Adelle McAteer Student ID: 20091411
 
-YouTube link demo link: https://www.youtube.com/watch?v=DKgN_2fNHMk
-
-YouTube link for Sensehat message display: https://www.youtube.com/watch?v=jFLCmrWethY
-
 Project Proposal When I first heard about the RaspberryPi project at the onsite day I started to think about what I could do. I thought it would be interesting to use it to track planes flying overhead and know the information from airline to type of plane.
 
 Automatic Dependent Surveillance—Broadcast (ADS-B) or ADS-B is the technology that will allow me to track flights. Aircraft are increasingly built or outfitted with ADS-B transponders. This data is unencrypted and easily picked up by ground antennas.
