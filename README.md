@@ -4,9 +4,6 @@ Student Name: Adelle McAteer
 
 Student Number: 20091411
 
-Git repository located in the master branch:
-https://github.com/AdelleMcateer/ADS-B-Ground-Station/tree/master
-
 Thing Speak Channel:
 https://thingspeak.com/channels/1264716
 
