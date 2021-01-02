@@ -1,3 +1,9 @@
+# Author: Adelle McAteer
+# Version: 1
+# Date: 02-02-2021
+
+# A sample json file showing data extracted from the PiAware URL and stored locally. 
+
 {
     "now": 1608835076.1,
     "messages": 306123,
