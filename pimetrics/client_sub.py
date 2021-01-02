@@ -1,5 +1,11 @@
 #!/usr/bin/python3
 
+# Author: Adelle McAteer
+# Version: 1
+# Date: 12-31-2020
+
+# Client subscriber script ran on VM
+
 import paho.mqtt.client as mqtt
 from urllib.parse import urlparse
 import sys
