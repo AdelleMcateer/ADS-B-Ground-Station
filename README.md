@@ -57,24 +57,24 @@ If there is not data “No data available”. This is just for demonstration pur
 The sensor data, humidity, temperature and pressure, is also published via MQTT to Thingspeak using the same script.
 If The CPU temperature goes over a certain level a react is also set up in ThingSpeak and sends a tweet via ThingTweet.
 
-Python Script:
-Python/writeEnvData.py
+### Python Script:
+- Python/writeEnvData.py
 
 # MQTT Client: Publish/Subcribe to RaspberryPi system information
 Using HiveMQ publish/subscribe set up for the system information.
 
 ### Python Scripts:
-..* pimetrics/client_sub.py,
-..* pimetrics/pimetrics_pub.py,
-..* pimetrics/pitemp.py
+- pimetrics/client_sub.py,
+- pimetrics/pimetrics_pub.py,
+- pimetrics/pitemp.py
 
 # Database Storage: 
 Database storage enabled using Python scripts.
 Data stored locally on the RaspberryPi and on Firebase.
 
-Python Scripts:
-Python/aircraft.py,
-firebase/ storeFileFB.py
+### Python Scripts:
+- Python/aircraft.py,
+- firebase/ storeFileFB.py
 
-Sample storage file:
-firebase/data.json
+### Sample storage file:
+- firebase/data.json
