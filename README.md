@@ -63,10 +63,10 @@ Python/writeEnvData.py
 # MQTT Client: Publish/Subcribe to RaspberryPi system information
 Using HiveMQ publish/subscribe set up for the system information.
 
-###Python Scripts:
-..*pimetrics/client_sub.py,
-..*pimetrics/pimetrics_pub.py,
-..*pimetrics/pitemp.py
+### Python Scripts:
+..* pimetrics/client_sub.py,
+..* pimetrics/pimetrics_pub.py,
+..* pimetrics/pitemp.py
 
 # Database Storage: 
 Database storage enabled using Python scripts.
