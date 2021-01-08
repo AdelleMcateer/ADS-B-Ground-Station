@@ -1,10 +1,10 @@
 # ADS-B-Ground-Station
 
-Student Name: Adelle McAteer
+**Student Name:** Adelle McAteer
 
-Student Number: 20091411
+**Student Number:** 20091411
 
-Thing Speak Channel:
+**Thing Speak Channel**:
 https://thingspeak.com/channels/1264716
 
 YouTube Demo Video:
