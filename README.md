@@ -37,6 +37,7 @@ System information about the RaspberryPi is collected to monitor CPU temperature
 -	FlightAware Pro Stick Plus - FlightAware's USB SDR ADS-B Receiver with a built-in
   1090MHz bandpass filter 
 -	1090MHz Desk Antenna - a 3dBi ADS-B 1090Mhz SMA Antenna with magnetic base
+- Mini Black HAT Hack3r - added to take more accurate temperature reading from the Sense Hat
 
 # Integration and how it functions:
 RaspberryPi4 with PiAware installed connected to FlightAware's USB SDR ADS-B Receiver and 1090MHz Desk Antenna picks up ADS-B signals from aircraft in range. 
