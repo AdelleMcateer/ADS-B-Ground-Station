@@ -2,7 +2,7 @@
 
 **Student Name:** Adelle McAteer
 
-**Student Number:** 20091411
+**Student Number:** 
 
 **Thing Speak Channel**:
 https://thingspeak.com/channels/1264716
